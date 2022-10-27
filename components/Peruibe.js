@@ -1,18 +1,17 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Touchable } from 'react-native';
 
-export default function HomeScreen({navigation}) {
+export default function Peruibe({navigation}) {
+    useEffect(
+        ()=>{
+            function teste(){
+                console.warn("Teste da useEffect");
+            }
+        },[]
+    );
     return (
       <View style={styles.bloco}>
-        <Text>Olá mundo</Text>
-
-        <TouchableOpacity
-          onPress={()=>navigation.navigate("SaoPaulo")}
-        >
-          <Text>
-            São Paulo
-          </Text>
-        </TouchableOpacity>
+        <Text>Peruíbe</Text>
       </View>
     );
 }
